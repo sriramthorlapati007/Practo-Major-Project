@@ -1,0 +1,36 @@
+{
+  "name": "final-project-pom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+<<<<<<< HEAD
+    "test:master": "playwright test --grep @master",
+    "test:sanity": "playwright test --grep @sanity",
+    "test:regression": "playwright test --grep @regression",
+    "test:datadriven": "playwright test --grep @datadriven",
+    "test:master:headed": "playwright test --grep @master --headed",
+    "test:end-to-end": "playwright test --grep @end-to-end --headed",
+    "test:sanity:debug": "playwright test --grep @sanity --debug"
+=======
+     "test:master" : "playwright test --grep @master",
+    "test:sanity" : "playwright test --grep @sanity",
+    "test:regression" : "playwright test --grep @regression",
+    "test:datadriven" : "playwright test --grep @datadriven",
+    "test:master:headed" : "playwright test --grep @master --headed",     
+    "test:end-to-end" : "playwright test --grep @end-to-end --headed",
+    "test:sanity:debug" : "playwright test --grep @sanity --debug"
+>>>>>>> 7db47ad3dc2a130482759bd7de64c8f6fbed6612
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.2.3"
+  },
+  "dependencies": {
+    "allure-playwright": "^3.4.5"
+  }
+}
