@@ -20,7 +20,7 @@ export class CorporateWellnessPage extends BasePage {
 
   constructor(page: Page) {
     super(page);
-    this.name = this.page.locator('input[name="name"], input[placeholder*="Name" i]').first();
+    this.name = this.page.locator('(//input[@placeholder = "Name"])[1]').first();
     this.company = this.page.locator('input[placeholder="Organization Name"]').first();
     this.phone = this.page.locator('input[placeholder="Contact Number"]').first();
     this.email = this.page.locator('input[placeholder="Official Email ID"]').first();

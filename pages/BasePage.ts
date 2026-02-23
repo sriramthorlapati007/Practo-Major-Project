@@ -27,7 +27,7 @@ export class BasePage {
   }
 
   
-  // * Progressive scroll to trigger lazy-loading.
+  // Progressive scroll to trigger lazy-loading.
    
   async progressiveScroll(times = 8, y = 800, delayMs = 200) {
     for (let i = 0; i < times; i++) {
@@ -36,7 +36,7 @@ export class BasePage {
     }
   }
 
-   //* Generic helper: scroll through a list until count stops changing or attempts exhausted.
+   // Generic helper: scroll through a list until count stops changing or attempts exhausted.
    
   async scrollUntilStableCount(
     locator: Locator,

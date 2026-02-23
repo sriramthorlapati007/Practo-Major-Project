@@ -60,12 +60,12 @@ test.describe('Practo flows (POM)', () => {
       interest: 'Taking a demo',
     });
 
-    const v = await corp.localValidate();
+    const valid = await corp.localValidate();
     console.log('\n=== FIELD CHECK RESULTS ===');
-    console.log('Name Valid?     →', v.isValidName ? '✔ Correct' : '❌ Wrong');
-    console.log('Company Valid?  →', v.isValidCompany ? '✔ Correct' : '❌ Wrong');
-    console.log('Phone Valid?    →', v.isValidPhone ? '✔ Correct' : '❌ Wrong');
-    console.log('Email Valid?    →', v.isValidEmail ? '✔ Correct' : '❌ Wrong');
+    console.log('Name Valid?     →', valid.isValidName ? 'Correct' : 'Wrong');
+    console.log('Company Valid?  →', valid.isValidCompany ? 'Correct' : ' Wrong');
+    console.log('Phone Valid?    →', valid.isValidPhone ? 'Correct' : ' Wrong');
+    console.log('Email Valid?    →', valid.isValidEmail ? 'Correct' : ' Wrong');
 
     await corp.submitForm();
     const messages = await corp.getInlineErrorMessages();
