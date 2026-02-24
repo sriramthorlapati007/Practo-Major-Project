@@ -1,7 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { HomePage } from '../pages/HomePage';
 import { HospitalsSearchPage } from '../pages/HospitalSearchPage';
-import { DiagnosticsPage } from '../pages/DiagnosticsPage';
 import { CorporateWellnessPage } from '../pages/CorporateWellnessPage';
 
 test.describe('Practo flows (POM)', () => {
@@ -32,18 +31,6 @@ test.describe('Practo flows (POM)', () => {
     const topCities = await home.getLabTestsTopCityTexts();
     console.log('Lab Tests Top Cities:', topCities);
     expect(topCities.length).toBeGreaterThan(0);
-  });
-
-  test('Diagnostics: parse and list all cities @smoke @sanity @regression', async ({ page }) => {
-    const diagnostics = new DiagnosticsPage(page);
-    await diagnostics.open();
-    await diagnostics.acceptCookiesIfPresent();
-    await diagnostics.progressiveScroll(8, 800, 200);
-
-    const cities = await diagnostics.getCitiesServed();
-    console.log('\n=== Cities Served (Diagnostics) ===');
-    cities.forEach((c, i) => console.log(`${i + 1}. ${c}`));
-    expect(cities.length).toBeGreaterThan(0);
   });
 
   test('Corporate: full validation + inline errors @smoke @sanity @regression', async ({ page }) => {

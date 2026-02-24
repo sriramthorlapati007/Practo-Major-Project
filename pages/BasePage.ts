@@ -25,17 +25,6 @@ export class BasePage {
   async waitNetworkIdle() {
     await this.page.waitForLoadState('networkidle');
   }
-
-  
-  // Progressive scroll to trigger lazy-loading.
-   
-  async progressiveScroll(times = 8, y = 800, delayMs = 200) {
-    for (let i = 0; i < times; i++) {
-      await this.page.mouse.wheel(0, y);
-      await this.page.waitForTimeout(delayMs);
-    }
-  }
-
    // Generic helper: scroll through a list until count stops changing or attempts exhausted.
    
   async scrollUntilStableCount(
